@@ -31,7 +31,7 @@ export default function Home() {
         <section className="sobre w-full">
           <div className="interface">
             <div className="flex">
-              <div className="txt-sobre">
+              <div className="txt-sobre items-center">
                   <h1 className=" text-4xl font-bold leading-10 mb-14">Sobre nós</h1>
                   <p className="text-base font-light leading-6 text-black">A partir do início de 2023, a RCL Analytics surge com o compromisso de potencializar de forma positiva o faturamento de seus clientes. Destacamo-nos como uma entidade singular, unindo os atributos de uma agência e uma consultoria de negócios, fortalecidas por tecnologia de ponta e inteligência artificial. Nossa proposta de valor harmoniza, em uma abordagem coesa, cinco áreas de conhecimento que frequentemente se encontram dispersas no mercado:</p>
               </div>
@@ -53,7 +53,7 @@ export default function Home() {
                     </div>
 
                     <div className="met-box">
-                        <h3 className="subtitle">Comprometimento e resultados:</h3>
+                        <h3 className="subtitle"><span className="gambiarra">Comprometimento</span> e resultados:</h3>
                         <p className="desc">Todos nossos contratos têm um componente relevante de remuneração variável: Ganhamos apenas quando o cliente ganha. Medimos a performance a partir das ações tomadas.</p>
                     </div>
                     
@@ -147,8 +147,9 @@ export default function Home() {
 
         <section className="forms items-center justify-center ">
           <div className="interface">
-  
-                <div className="forms-container">
+                  
+                <div className="forms-container flex flex-col">
+                <h1 className="txt-form text-white">Faça o seu orçamento!</h1>
                   <Forms/>
                 </div>
             

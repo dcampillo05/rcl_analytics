@@ -315,3 +315,55 @@ input::placeholder{
     
 }
 
+.forms-container .txt-form{
+    font-weight: 600;
+    font-size: 30px;
+    padding-bottom: 80px;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 768px) {
+    /* Sobre */
+    .txt-sobre{
+        
+        margin: 0 auto; 
+        text-align: center;
+    }
+
+    /* Atuação */
+    section.atuacao .flex{
+        flex-direction: column;
+        text-align: center;
+        
+    }
+    .atuacao .flex .atuacao-box p{
+        text-align: center;
+    }
+
+    .metodologia .flex {
+        flex-direction: row; /* Altera a direção do flexbox para linha */
+        justify-content: space-between; /* Distribui os itens ao longo da linha */
+        align-items: center; /* Centraliza os itens na direção transversal */
+        flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha se não couberem */
+    }
+
+    /* metodologia */
+    .metodologia .met-box {
+        width: calc(50% - 20px); /* Define a largura para 50% do contêiner pai, com margens entre eles */
+        text-align: center;
+    }
+
+    span.gambiarra{
+        margin-left: -35px;
+    }
+
+    .metodologia .btn-contato {
+        width: 100%; /* Faz o botão ocupar toda a largura do contêiner pai */
+        text-align: center; /* Centraliza o botão horizontalmente */
+    }
+
+    /**/
+
+
+}
