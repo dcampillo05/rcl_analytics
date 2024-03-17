@@ -8,6 +8,8 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import SideMenu from "./side-menu";
 import "../static/styles.css"
+import Link from "next/link";
+
 
 const Header = () => {
     const [showMenu, setShowMenu] = useState(false);
@@ -29,6 +31,7 @@ const Header = () => {
             window.removeEventListener("resize", handleResize);
         };
     }, []);
+
 
     return (
         <div className="bg-gradient-to-br from-black to-gray-800 w-full fixed top-0 left-0 z-50 shadow-md" id="header">
@@ -53,11 +56,10 @@ const Header = () => {
                     
                     <nav className="mr-20">
                         <ul className="flex">
-                            <li className="ml-4"><a href="#" className="text-white transition-colors duration-300 hover:text-blue-500">Sobre Nós</a></li>
-                            <li className="ml-4"><a href="#" className="text-white transition-colors duration-300 hover:text-blue-500">O que fazemos</a></li>
-                            <li className="ml-4"><a href="#" className="text-white transition-colors duration-300 hover:text-blue-500">Trabalhe Conosco</a></li>
-                            <li className="ml-4"><a href="#" className="text-white transition-colors duration-300 hover:text-blue-500">Práticas</a></li>
-                            <li className="ml-4"><a href="#" className="text-white transition-colors duration-300 hover:text-blue-500">Percepções</a></li>
+                            <li className="ml-4"><a href="#sobre" className="text-white transition-colors duration-300 hover:text-blue-500">Sobre Nós</a></li>
+                            <li className="ml-4"><a href="#atuacao" className="text-white transition-colors duration-300 hover:text-blue-500">O que fazemos</a></li>
+                            <li> <Link  href={"/portfolio"} className="ml-4 text-white transition-colors duration-300 hover:text-blue-500">Portfolio</Link> </li>
+                            <li className="ml-4"><a href="#forms" className="text-white transition-colors duration-300 hover:text-blue-500">Valores</a></li>
                             <li className="ml-4"><a href="#" className="text-white transition-colors duration-300 hover:text-blue-500">Contato</a></li>
                         </ul>
                     </nav>

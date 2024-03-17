@@ -321,6 +321,13 @@ input::placeholder{
     padding-bottom: 80px;
 }
 
+/* Footer */
+
+.Footer-Container{
+    background-color: #FFF;
+}
+
+
 /* Responsive */
 
 @media screen and (max-width: 768px) {

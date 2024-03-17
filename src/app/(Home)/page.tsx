@@ -1,12 +1,14 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import Atuacao from "../_Components/atuacao-section";
 import { Component } from "../_Components/carousel";
 import Header from "../_Components/header";
 import "../static/styles.css"
 import Image from "next/image";
 import { Forms } from "../_Components/forms";
+import FooterCl from "../_Components/footer";
+
+
 
 
 
@@ -16,7 +18,9 @@ export default function Home() {
   return (
 
     <>
-      <div className="" id="">
+      
+
+      <div className="" id="Menu">
         <Header/>
       </div>
       
@@ -28,7 +32,7 @@ export default function Home() {
           <Component/>
         </div>
 
-        <section className="sobre w-full">
+        <section className="sobre w-full" id="sobre">
           <div className="interface">
             <div className="flex">
               <div className="txt-sobre items-center">
@@ -39,7 +43,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="atuacao">
+        <section className="atuacao" id="atuacao">
             <Atuacao/>
         </section>
 
@@ -145,7 +149,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="forms items-center justify-center ">
+        <section className="forms items-center justify-center " id="forms">
           <div className="interface">
                   
                 <div className="forms-container flex flex-col">
@@ -159,6 +163,9 @@ export default function Home() {
 
      </main>
         
+     <footer>
+      <FooterCl/>
+     </footer>
     </>
 
     
