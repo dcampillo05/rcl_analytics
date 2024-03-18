@@ -8,74 +8,14 @@ import "../static/script"
 import { Forms } from "../_Components/forms";
 import FooterCl from "../_Components/footer";
 import Profile from "../_Components/Profile";
-import { useEffect } from "react";
+
 import ScrollReveal from 'scrollreveal';
 
 
 
 
 export default function Home() {
-  // useEffect(() => {
-  //   // Check if window is defined (client-side)
-  //   if (typeof window !== 'undefined') {
-  //     import('scrollreveal').then((module) => {
-  //       const sr = module.default();
 
-  //       sr.reveal('.sobre', {
-  //         duration: 2000,
-  //         distance: '90px'
-  //       });
-
-  //       sr.reveal('.a1', {
-  //         duration: 2000,
-  //         distance: '90px',
-  //         delay: 500
-  //       });
-
-  //       sr.reveal('.a2', {
-  //         duration: 2000,
-  //         distance: '90px',
-  //         delay: 1000
-  //       });
-
-  //       sr.reveal('.a3', {
-  //         duration: 2000,
-  //         distance: '90px',
-  //         delay: 1500
-  //       });
-
-  //       sr.reveal('.d1', {
-  //         duration: 2000,
-  //         distance: '90px',
-  //         delay: 500,
-  //         origin: 'left'
-  //       });
-  //       sr.reveal('.d2', {
-  //         duration: 2000,
-  //         distance: '90px',
-  //         delay: 1000,
-  //         origin: 'left'
-  //       });
-  //       sr.reveal('.d3', {
-  //         duration: 2000,
-  //         distance: '90px',
-  //         delay: 1500,
-  //         origin: 'left'
-  //       });
-  //       sr.reveal('.d4', {
-  //         duration: 2000,
-  //         distance: '90px',
-  //         delay: 2000,
-  //         origin: 'left'
-  //       });
-  
-  //       // Clean up ScrollReveal to prevent memory leaks
-  //       return () => {
-  //         sr.destroy();
-  //       };
-  //     });
-  //   }
-  // }, []);
   
   return (
 
