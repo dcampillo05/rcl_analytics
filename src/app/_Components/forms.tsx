@@ -10,12 +10,12 @@ import "../static/styles.css"
 import Image from "next/image";
 import emailjs from '@emailjs/browser';
 
-require('dotenv').config();
+
 
 const createUserFormSchema = z.object({
   email: z.string().nonempty('Email é obrigatório').email('Formato de email inválido'),
   name: z.string().nonempty('Nome é obrigatório'),
-  number: z.string().nonempty('Numero é obrigatorio').regex(/^\d+$/, 'Somente números são permitidos')
+  number: z.string().nonempty('Numero é obrigatorio').regex(/^\d{11}$/i, 'Número de celular inválido')
 });
 
 type FormData = z.infer<typeof createUserFormSchema>;
@@ -29,21 +29,12 @@ export function Forms() {
     // TODO: alarme
 
     const sendEmail = (formData: FormData) => {
-      if (!process.env.EMAILJS_SERVICE_ID || !process.env.EMAILJS_TEMPLATE_ID || !process.env.EMAILJS_USER_ID) {
-        console.error('Erro: Variáveis de ambiente não definidas.');
-        return;
-      }
-    
-      emailjs.sendForm(
-        process.env.EMAILJS_SERVICE_ID,
-        process.env.EMAILJS_TEMPLATE_ID,
-        '#myForm',
-        process.env.EMAILJS_USER_ID
-      ).then((result) => {
-        console.log('E-mail enviado com sucesso!', result.text);
-      }).catch((error) => {
-        console.error('Erro ao enviar o e-mail:', error.text);
-      });
+      emailjs.sendForm('service_sisvgfd', 'template_4f6olfn', '#myForm', 't4A-FD2ErOOrJrvSJ')
+        .then((result) => {
+          console.log('E-mail enviado com sucesso!', result.text);
+        }, (error) => {
+          console.error('Erro ao enviar o e-mail:', error.text);
+        });
     };
 
   const onSubmit = async (data: FormData) => {
