@@ -10,12 +10,12 @@ import "../static/styles.css"
 import Image from "next/image";
 import emailjs from '@emailjs/browser';
 
-
+require('dotenv').config();
 
 const createUserFormSchema = z.object({
   email: z.string().nonempty('Email é obrigatório').email('Formato de email inválido'),
   name: z.string().nonempty('Nome é obrigatório'),
-  number: z.string().nonempty('Numero é obrigatorio')
+  number: z.string().nonempty('Numero é obrigatorio').regex(/^\d+$/, 'Somente números são permitidos')
 });
 
 type FormData = z.infer<typeof createUserFormSchema>;
@@ -29,12 +29,21 @@ export function Forms() {
     // TODO: alarme
 
     const sendEmail = (formData: FormData) => {
-      emailjs.sendForm('service_sisvgfd', 'template_4f6olfn', '#myForm', 't4A-FD2ErOOrJrvSJ')
-        .then((result) => {
-          console.log('E-mail enviado com sucesso!', result.text);
-        }, (error) => {
-          console.error('Erro ao enviar o e-mail:', error.text);
-        });
+      if (!process.env.EMAILJS_SERVICE_ID || !process.env.EMAILJS_TEMPLATE_ID || !process.env.EMAILJS_USER_ID) {
+        console.error('Erro: Variáveis de ambiente não definidas.');
+        return;
+      }
+    
+      emailjs.sendForm(
+        process.env.EMAILJS_SERVICE_ID,
+        process.env.EMAILJS_TEMPLATE_ID,
+        '#myForm',
+        process.env.EMAILJS_USER_ID
+      ).then((result) => {
+        console.log('E-mail enviado com sucesso!', result.text);
+      }).catch((error) => {
+        console.error('Erro ao enviar o e-mail:', error.text);
+      });
     };
 
   const onSubmit = async (data: FormData) => {
@@ -66,7 +75,7 @@ export function Forms() {
                   placeholder="Nome Completo..."
                   {...register('name')}
                 />
-                {errors.name && <span>{errors.name.message}</span>}
+                {errors.name && <span className="text-white">{errors.name.message}</span>}
               </div>
 
                <div >
@@ -77,7 +86,7 @@ export function Forms() {
                     placeholder="Seu melhor email..."
                     {...register('email')}
                   />
-                  {errors.email && <span>{errors.email.message}</span>}
+                  {errors.email && <span className="text-white">{errors.email.message}</span>}
               </div>
 
              

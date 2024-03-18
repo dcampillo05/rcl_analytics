@@ -370,7 +370,10 @@ input::placeholder{
         text-align: center; /* Centraliza o botão horizontalmente */
     }
 
-    /**/
+    /*Diferencial*/
+    .Container-list span{
+        margin-top: 70px;
+    }
 
 
 }

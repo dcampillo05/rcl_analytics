@@ -4,16 +4,73 @@ import Atuacao from "../_Components/atuacao-section";
 import { Component } from "../_Components/carousel";
 import Header from "../_Components/header";
 import "../static/styles.css"
-import Image from "next/image";
+import "../static/script"
 import { Forms } from "../_Components/forms";
 import FooterCl from "../_Components/footer";
-
+import Profile from "../_Components/Profile";
+import { useEffect } from "react";
+import ScrollReveal from 'scrollreveal';
 
 
 
 
 export default function Home() {
+  useEffect(() => {
+    const sr = ScrollReveal();
+
+    sr.reveal('.sobre', {
+      duration: 2000,
+      distance: '90px'
+    });
+
+    sr.reveal('.a1', {
+      duration: 2000,
+      distance: '90px',
+      delay: 500
+    })
+
+    sr.reveal('.a2', {
+      duration: 2000,
+      distance: '90px',
+      delay: 1000
+    })
+
+    sr.reveal('.a3', {
+      duration: 2000,
+      distance: '90px',
+      delay: 1500
+    })
+
+    sr.reveal('.d1', {
+      duration: 2000,
+      distance: '90px',
+      delay: 500,
+      origin: 'left'
+    });
+    sr.reveal('.d2', {
+      duration: 2000,
+      distance: '90px',
+      delay: 1000,
+      origin: 'left'
+    });
+    sr.reveal('.d3', {
+      duration: 2000,
+      distance: '90px',
+      delay: 1500,
+      origin: 'left'
+    });
+    sr.reveal('.d4', {
+      duration: 2000,
+      distance: '90px',
+      delay: 2000,
+      origin: 'left'
+    });
   
+    // Limpar o ScrollReveal ao desmontar o componente para evitar vazamento de memória
+    return () => {
+      sr.destroy();
+    };
+  }, []);
   
   return (
 
@@ -73,10 +130,9 @@ export default function Home() {
         </section>
 
 
-        <section className="funcionario">
+        {/* <section className="funcionario">
             <div className="interface">
                 <div className="flex">
-                    {/* TODO caso haja mais de um funcionario, adicionar o nome e a imagem dele no site */}
                     <div className="img-func">
                         <Image src={"/pessoa.jpg"} alt="Imagem do funcionario" width={1000} height={80} />
                     </div>
@@ -90,6 +146,10 @@ export default function Home() {
 
                 </div>
             </div>
+        </section> */}
+
+        <section>
+          <Profile/>
         </section>
 
         <section className="diferenciais">
@@ -98,7 +158,7 @@ export default function Home() {
 
               <h2>Por que a <span>RCL Analytics</span> é diferente?</h2>
 
-              <div className="Container-list relative z-5 pt-4 pb-12 space-y-4 lg:space-y-0 lg:mt-0 lg:pt-16 lg:pb-24">
+              <div className="d1 Container-list relative z-5 pt-4 pb-12 space-y-4 lg:space-y-0 lg:mt-0 lg:pt-16 lg:pb-24">
                   <span className="Number-list  !font-bold !text-[4.625rem] !leading-[5rem]" 
                   style={{
                     marginRight: '45px',
@@ -106,10 +166,10 @@ export default function Home() {
 
                   }}>01</span>
 
-                  <p className=" !text-black lg:text-[1.125rem]">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt impedit labore nesciunt asperiores eos! Atque neque quo numquam autem veritatis error odio tenetur accusamus. Aliquam sunt quasi dolor exercitationem expedita!</p>
+                  <p className=" !text-black lg:text-[1.125rem]"><strong>Serviços Centralizados e Diretos:</strong> Eliminamos a necessidade de envolver terceiros, garantindo uma experiência mais eficiente e direta para nossos clientes.</p>
 
               </div>
-              <div className="Container-list relative z-5 pt-4 pb-12 space-y-4 lg:space-y-0 lg:mt-0 lg:pt-16 lg:pb-24">
+              <div className="d2 Container-list relative z-5 pt-4 pb-12 space-y-4 lg:space-y-0 lg:mt-0 lg:pt-16 lg:pb-24">
                   <span className="Number-list  !font-bold !text-[4.625rem] !leading-[5rem]" 
                   style={{
                     marginRight: '45px',
@@ -117,10 +177,10 @@ export default function Home() {
 
                   }}>02</span>
 
-                  <p className=" !text-black lg:text-[1.125rem]">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt impedit labore nesciunt asperiores eos! Atque neque quo numquam autem veritatis error odio tenetur accusamus. Aliquam sunt quasi dolor exercitationem expedita!</p>
+                  <p className=" !text-black lg:text-[1.125rem]"><strong>Ferramentas Integradas para Facilitar a Entrega:</strong>  Utilizamos ferramentas integradas de última geração para tornar a entrega dos serviços mais eficiente e eficaz.</p>
 
               </div>
-              <div className="Container-list relative z-5  pb-12 space-y-4 lg:space-y-0 lg:mt-0 lg:pt-16 lg:pb-24">
+              <div className="d3 Container-list relative z-5  pb-12 space-y-4 lg:space-y-0 lg:mt-0 lg:pt-16 lg:pb-24">
                   <span className="Number-list  !font-bold !text-[4.625rem] !leading-[5rem]" 
                   style={{
                     marginRight: '45px',
@@ -128,10 +188,10 @@ export default function Home() {
 
                   }}>03</span>
 
-                  <p className=" !text-black lg:text-[1.125rem]">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt impedit labore nesciunt asperiores eos! Atque neque quo numquam autem veritatis error odio tenetur accusamus. Aliquam sunt quasi dolor exercitationem expedita!</p>
+                  <p className=" !text-black lg:text-[1.125rem]"><strong>Planos Personalizáveis para Atender às Necessidades de Negócios Diversos:</strong> Oferecemos planos personalizáveis que se adaptam aos diferentes tipos de negócios e tamanhos de empresa, garantindo que cada cliente receba exatamente o que precisa.</p>
 
               </div>
-              <div className="Container-list relative z-5 pt-4 pb-12 space-y-4 lg:space-y-0 lg:mt-0 lg:pt-16 lg:pb-24">
+              <div className="d4 Container-list relative z-5 pt-4 pb-12 space-y-4 lg:space-y-0 lg:mt-0 lg:pt-16 lg:pb-24">
                   <span className="Number-list  !font-bold !text-[4.625rem] !leading-[5rem]" 
                   style={{
                     marginRight: '45px',
@@ -139,7 +199,7 @@ export default function Home() {
 
                   }}>04</span>
 
-                  <p className=" !text-black lg:text-[1.125rem]">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt impedit labore nesciunt asperiores eos! Atque neque quo numquam autem veritatis error odio tenetur accusamus. Aliquam sunt quasi dolor exercitationem expedita!</p>
+                  <p className=" !text-black lg:text-[1.125rem]"><strong>Suporte e Esclarecimento de Dúvidas 24/7:</strong> Nossa equipe de suporte está disponível 24 horas por dia, 7 dias por semana, para fornecer assistência e esclarecer qualquer dúvida que nossos clientes possam ter, garantindo assim uma comunicação contínua e eficaz.</p>
 
               </div>
 
