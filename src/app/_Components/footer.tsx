@@ -7,8 +7,8 @@ function FooterCl() {
           <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
             <div className="md:flex md:justify-between">
               <div className="mb-6 md:mb-0">
-                <a href="https://flowbite.com/" className="flex items-center">
-                 <Image src={"/logo.png"} alt='Logo' width={150} height={90}/>
+                <a href="#" className="flex items-center">
+                 <Image src="/Logo.png" alt='Logo' width={150} height={90}/>
                   {/* <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">RCL Analytics</span> */}
                 </a>
               </div>
@@ -21,7 +21,7 @@ function FooterCl() {
                       <a href="" className="hover:underline ">Instagram</a>
                     </li>
                     <li>
-                      <a href="" className="hover:underline">Facebook</a>
+                      <a href="" className="hover:underline">Linkedin</a>
                     </li>
                   </ul>
                 </div>

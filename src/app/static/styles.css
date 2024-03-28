@@ -5,6 +5,7 @@
     margin: 0 auto;
 }
 
+
 .flex{
     display: flex;
 }
@@ -229,6 +230,8 @@ section.diferenciais .flex{
     color: transparent;
     display: inline-block;
     display: block;
+    
+
 }
 
 .diferenciais h2 span{
