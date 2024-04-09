@@ -24,7 +24,7 @@ const Atuacao = () => {
 
                     <div className="a3 atuacao-box">
                         <span>03</span>
-                        <h3 className="subtitle">Automação de processos e uso de IA baseada em dado</h3>
+                        <h3 className="subtitle">Automação de Processos e uso de IA</h3>
                         <p className="desc">Em um cenário empresarial onde a agilidade e eficiência são a chave para o sucesso, a automação de processos e o uso da inteligência artificial baseada em dados emergem como diferenciais cruciais. Imagine otimizar sua operação, reduzir custos e potencializar a qualidade das decisões, tudo isso enquanto libera recursos para focar no que realmente importa: o crescimento do seu negócio.</p>
                     </div>
                 </div>

@@ -95,8 +95,8 @@ section.metodologia .flex{
 }
 
 .metodologia .btn-contato button{
-    padding: 10px 80px;
-    font-size: 22px;
+    padding: 10px 100px;
+    font-size: 18px;
     margin-bottom: 120px;
     font-weight: 600;
     background: linear-gradient(45deg, #03597ef8, #012b3df8 );
@@ -122,77 +122,53 @@ section.metodologia .flex{
     }
 }
 
-/* Funcionario */
+/* Clientes */
 
-section.funcionario{
-    padding: 80px 4%;
+section.clientes{
+    padding: 40px 4%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.funcionario{
-    background: linear-gradient(to right, #03597ef8, #012b3df8 );
-    height: auto;
+.clientes{
+    background-color: #f1f1eef8;
+    justify-content: center;
 }
 
-.funcionario .img-func img{
-    border-radius: 20px;
-    margin-top: 50px;
-}
-
-.funcionario .sobre-func{
-    padding-left: 125px;
-}
-
-.funcionario .sobre-func h1{
-    margin-top: 100px;
-    font-size: 3.255rem;
+.clientes h1{
+    color: #487d95;
+    font-size: 37px;
     font-weight: 700;
-    line-height: 5rem;
-    width: fit-content;
-    color: #fff;
-    filter:drop-shadow(0 0 2px #000)
+    margin-bottom: 20px;
 }
 
-.funcionario .sobre-func h3{
-    margin-top: 5px;
-    color: #fff;
-    font-size: 1.625rem;   
+.clients-container{
+    justify-content: space-between;
+    display: flex;
 }
 
-
-.funcionario .sobre-func h5{
-    margin-top: 10px;
-    font-size: 18px;
-    font-weight: 600;
-    color: #fff;
+.Pavani .clients-img {
+    margin-top: -40px;
 }
 
-.funcionario .sobre-func p{
-    margin-top: 15px;
-    margin-bottom: 35px;
-    font-weight: 300;
-    color: #fff;
+.clients-carousel-container {
+    display: none; 
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .clients-carousel-container {
+      display: block; /* Exibe o carrossel apenas em dispositivos com largura menor ou igual a 600px (tamanho de dispositivo móvel típico) */
+    }
+  }
+  
+
+.clients-img {
+    margin-right: 80px;     
 }
 
- .btn-social button{
-    margin-top: 20px;
-    width: 53px;
-    height: 53px;
-    border-radius: 50%;
-    border: none;
-    background-color: #FFF;
-    font-size: 22px;
-    cursor: pointer;
-    margin: 0 10px;
-}
-
-.btn-social button i{
-    color: #000;
-}
-
-.btn-social button:hover{
-    box-shadow: 0 0 8px #000;
-    transform: scale(1.05);
-    transition: 0.7s;
+.clientes-img img{
+    width: 100%;
 }
 
 /* Diferenciais */
@@ -352,15 +328,15 @@ input::placeholder{
     }
 
     .metodologia .flex {
-        flex-direction: row; /* Altera a direção do flexbox para linha */
-        justify-content: space-between; /* Distribui os itens ao longo da linha */
-        align-items: center; /* Centraliza os itens na direção transversal */
-        flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha se não couberem */
+        flex-direction: row; 
+        justify-content: space-between; 
+        align-items: center; 
+        flex-wrap: wrap; 
     }
 
     /* metodologia */
     .metodologia .met-box {
-        width: calc(50% - 20px); /* Define a largura para 50% do contêiner pai, com margens entre eles */
+        width: calc(50% - 20px); 
         text-align: center;
     }
 
@@ -369,8 +345,8 @@ input::placeholder{
     }
 
     .metodologia .btn-contato {
-        width: 100%; /* Faz o botão ocupar toda a largura do contêiner pai */
-        text-align: center; /* Centraliza o botão horizontalmente */
+        width: 100%; 
+        text-align: center; 
     }
 
     /*Diferencial*/
