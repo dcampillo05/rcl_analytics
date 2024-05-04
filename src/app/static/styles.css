@@ -307,6 +307,72 @@ input::placeholder{
 }
 
 
+/* PORTFOLIO */
+
+.projectItem{
+    float: left;
+    /* width: 33.3333333333%; */
+    padding: 15px;
+    box-sizing: border-box ;
+}
+
+.project-box{
+    position: relative;
+    overflow: hidden;
+}
+
+.project-thumbnail{
+    overflow: hidden;
+}       
+
+.project-thumbnail img{
+    width: 345px;
+    height: 345px;
+}
+
+.portfolio-info{
+    width: 100%;
+    height: 100%;
+    position: absolute; 
+    bottom: 0;
+    left: 0;
+    background: rgba(12, 41, 53, 0.5);
+    opacity: 0;
+    transition: all 0.3s linear;
+}
+
+a.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* background: #fff; */
+    opacity: 0.8;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.portfolio-info-inner{
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 100%;
+    padding: 30px 40px;
+    transform: translateX(-50%);
+}
+
+.portfolio-info-inner h5{
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 7px;
+}
+
+.portfolio-info-inner h5 a{
+    color: #fff;
+}
+
+
+
 /* Responsive */
 
 @media screen and (max-width: 768px) {
