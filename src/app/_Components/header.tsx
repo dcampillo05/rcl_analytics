@@ -14,7 +14,7 @@ import Link from "next/link";
 const Header = () => {
     const [showMenu, setShowMenu] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
-   
+
     const toggleMenu = () => {
         setShowMenu(!showMenu);
     };
@@ -24,8 +24,8 @@ const Header = () => {
             setIsMobile(window.innerWidth < 900);
         };
 
-        handleResize(); 
-        window.addEventListener("resize", handleResize); 
+        handleResize();
+        window.addEventListener("resize", handleResize);
 
         return () => {
             window.removeEventListener("resize", handleResize);
@@ -34,33 +34,33 @@ const Header = () => {
 
 
     return (
-        <div className="bg-gradient-to-br from-black to-gray-800 w-full fixed top-0 left-0 z-50 shadow-md" id="header">
+        <div className={`bg-gradient-to-br from-black to-gray-800  fixed top-0 left-0 z-50 shadow-md ${isMobile ? 'w-full ' : 'w-full'} `} id="header">
             <div className="flex justify-between items-center px-4">
-                <div className={`${isMobile ? 'ml-4' : 'ml-20'}`}> 
+                <div className={`${isMobile ? 'ml-4' : 'ml-20'}`}>
                     <Image src="/Logo.png" alt="Logo" width={160} height={60} />
                 </div>
 
-                
+
                 {isMobile ? (
                     <Sheet>
                         <SheetTrigger asChild>
                             <Button variant={"secondary"} size={"icon"} className="bg-transparent text-white">
-                                <MenuIcon/>
+                                <MenuIcon />
                             </Button>
                         </SheetTrigger>
                         <SheetContent className="bg-gradient-to-bl from-[#03597ef8] to-[#012b3df8]">
-                            <SideMenu/>
+                            <SideMenu />
                         </SheetContent>
                     </Sheet>
                 ) : (
-                    
+
                     <nav className="mr-20">
                         <ul className="flex">
                             <li className="ml-4"><a href="#sobre" className="text-white transition-colors duration-300 hover:text-blue-500">Sobre Nós</a></li>
                             <li className="ml-4"><a href="#atuacao" className="text-white transition-colors duration-300 hover:text-blue-500">O que fazemos</a></li>
-                            <li> <Link  href={"/portfolio"} className="ml-4 text-white transition-colors duration-300 hover:text-blue-500">Portfolio</Link> </li>
-                            <li className="ml-4"><a href="#forms" className="text-white transition-colors duration-300 hover:text-blue-500">Valores</a></li>
-                            <li className="ml-4"><a href="#" className="text-white transition-colors duration-300 hover:text-blue-500">Contato</a></li>
+                            <li> <Link href={"/portfolio"} className="ml-4 text-white transition-colors duration-300 hover:text-blue-500">Portfolio</Link> </li>
+                            <li className="ml-4"><a href="#meth" className="text-white transition-colors duration-300 hover:text-blue-500">Contato</a></li>
+                            <li className="ml-4"><a href="#forms" className="text-white transition-colors duration-300 hover:text-blue-500">Orçamento</a></li>
                         </ul>
                     </nav>
                 )}

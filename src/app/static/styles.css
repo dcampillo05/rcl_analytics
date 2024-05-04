@@ -138,7 +138,6 @@ section.clientes{
 
 .clientes h1{
     color: #487d95;
-    font-size: 37px;
     font-weight: 700;
     margin-bottom: 20px;
 }
@@ -176,6 +175,7 @@ section.clientes{
 section.diferenciais {
     padding: 40px 4%;
     display: flex;
+    background-color: #fff!important;
 }
 
 section.diferenciais .interface{

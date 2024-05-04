@@ -23,25 +23,29 @@ export default function Home() {
         duration: 2000,
         distance: '90px',
         delay: 500,
-        origin: 'right'
+        origin: 'right',
+        mobile: false,
       });
       sr.reveal('.d2', {
         duration: 2000,
         distance: '90px',
         delay: 1000,
-        origin: 'right'
+        origin: 'right',
+        mobile: false,
       });
       sr.reveal('.d3', {
         duration: 2000,
         distance: '90px',
         delay: 1400,
-        origin: 'right'
+        origin: 'right',
+        mobile: false,
       });
       sr.reveal('.d4', {
         duration: 2000,
         distance: '90px',
         delay: 1900,
-        origin: 'right'
+        origin: 'right',
+        mobile: false,
       });
 
       return () => {
@@ -67,7 +71,7 @@ export default function Home() {
           <Component />
         </div>
 
-        <section className="sobre w-full" id="sobre">
+        <section className="sobre " id="sobre">
           <div className="interface">
             <div className="flex">
               <div className="txt-sobre items-center">
@@ -82,7 +86,7 @@ export default function Home() {
           <Atuacao />
         </section>
 
-        <section className="metodologia">
+        <section className="metodologia" id="meth">
           <div className="interface">
             <div className="flex">
 
@@ -112,7 +116,7 @@ export default function Home() {
           <Clients />
         </section>
 
-        <section className="diferenciais">
+        <section className="diferenciais bg-white">
           <div className="interface">
             <div className="flex">
 

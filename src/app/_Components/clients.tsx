@@ -30,8 +30,8 @@ const Clients = () => {
     }, []);
 
     return (
-        <>
-            <h1 className="mb-8">Nossos Clientes</h1>
+        <div className=" items-center">
+            <h1 className="text-center mb-8  xl:text-[37px] max-lg:text-3xl">Nossos Clientes</h1>
 
             {isMobile ? (
                 <div className=" w-full h-56 sm:h-64 xl:h-80 2xl:h-96">
@@ -63,7 +63,7 @@ const Clients = () => {
             )}
 
 
-        </>
+        </div>
     );
 }
 
