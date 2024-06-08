@@ -27,15 +27,15 @@ export function Forms() {
     resolver: zodResolver(createUserFormSchema),
   });
 
-  // TODO: alarme
-
   const sendEmail = (formData: FormData) => {
-    if (!process.env.EMAILJS_SERVICEID || !process.env.EMAILJS_TEMPLATEID || !process.env.EMAILJS_USERID) {
+    const form = document.getElementById('myForm') as HTMLFormElement;
+
+    if (!process.env.NEXT_PUBLIC_EMAILJS_SERVICEID || !process.env.NEXT_PUBLIC_EMAILJS_TEMPLATEID || !process.env.NEXT_PUBLIC_EMAILJS_USERID) {
       console.error('Variáveis de ambiente não definidas para Email.js');
       return;
     }
 
-    emailjs.sendForm(process.env.EMAILJS_SERVICEID, process.env.EMAILJS_TEMPLATEID, '#myForm', process.env.EMAILJS_USERID)
+    emailjs.sendForm(process.env.NEXT_PUBLIC_EMAILJS_SERVICEID, process.env.NEXT_PUBLIC_EMAILJS_TEMPLATEID, form, process.env.NEXT_PUBLIC_EMAILJS_USERID)
       .then((result) => {
         console.log('E-mail enviado com sucesso!', result.text);
       }, (error) => {
@@ -51,8 +51,6 @@ export function Forms() {
       }
       sendEmail(data);
       setOutput('Dados inseridos com sucesso!');
-
-
       reset();
     } catch (error) {
       console.error('Erro ao inserir os dados:', error);
@@ -62,10 +60,9 @@ export function Forms() {
 
   return (
     <div className="forms-box">
-
       <Image src={"/Logo.png"} alt="logo" height={110} width={150} />
       <form onSubmit={handleSubmit(onSubmit)} id="myForm">
-        <div >
+        <div>
           <input
             type="text"
             id="name"
@@ -75,8 +72,7 @@ export function Forms() {
           {errors.name && <span className="text-white">{errors.name.message}</span>}
         </div>
 
-        <div >
-
+        <div>
           <input
             type="email"
             id="Email"
@@ -86,9 +82,7 @@ export function Forms() {
           {errors.email && <span className="text-white">{errors.email.message}</span>}
         </div>
 
-
-        <div >
-
+        <div>
           <input
             type="text"
             placeholder="Seu numero de celular..."

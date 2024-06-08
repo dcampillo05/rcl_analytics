@@ -32,12 +32,19 @@ const Header = () => {
         };
     }, []);
 
+    const handleScroll = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>, targetID: string) => {
+        event.preventDefault();
+        const targetElement = document.getElementById(targetID);
+        if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth' })
+        }
+    }
 
     return (
         <div className={`bg-gradient-to-br from-black to-gray-800  fixed top-0 left-0 z-50 shadow-md ${isMobile ? 'w-full ' : 'w-full'} `} id="header">
             <div className="flex justify-between items-center px-4">
                 <div className={`${isMobile ? 'ml-4' : 'ml-20'}`}>
-                    <Image src="/Logo.png" alt="Logo" width={160} height={60} />
+                    <a href="/"><Image src="/Logo.png" alt="Logo" width={160} height={60} /></a>
                 </div>
 
 
@@ -56,11 +63,11 @@ const Header = () => {
 
                     <nav className="mr-20">
                         <ul className="flex">
-                            <li className="ml-4"><a href="#sobre" className="text-white transition-colors duration-300 hover:text-blue-500">Sobre Nós</a></li>
-                            <li className="ml-4"><a href="#atuacao" className="text-white transition-colors duration-300 hover:text-blue-500">O que fazemos</a></li>
+                            <li className="ml-4"><a href="/#sobre" className="text-white transition-colors duration-300 hover:text-blue-500">Sobre Nós</a></li>
+                            <li className="ml-4"><a href="/#atuacao" className="text-white transition-colors duration-300 hover:text-blue-500">O que fazemos</a></li>
                             <li> <Link href={"/portfolio"} className="ml-4 text-white transition-colors duration-300 hover:text-blue-500">Portfolio</Link> </li>
-                            <li className="ml-4"><a href="#meth" className="text-white transition-colors duration-300 hover:text-blue-500">Contato</a></li>
-                            <li className="ml-4"><a href="#forms" className="text-white transition-colors duration-300 hover:text-blue-500">Orçamento</a></li>
+                            <li className="ml-4"><a href="/#meth" className="text-white transition-colors duration-300 hover:text-blue-500">Contato</a></li>
+                            <li className="ml-4"><a href="/#forms" className="text-white transition-colors  duration-300 hover:text-blue-500">Orçamento</a></li>
                         </ul>
                     </nav>
                 )}

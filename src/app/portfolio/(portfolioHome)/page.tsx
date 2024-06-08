@@ -4,6 +4,7 @@ import Header from "@/app/_Components/header";
 import { motion } from "framer-motion"
 import Image from "next/image";
 import PortItems from "../components/portfolioItems";
+import FooterCl from "@/app/_Components/footer";
 
 const Portfolio = () => {
     return (
@@ -12,6 +13,8 @@ const Portfolio = () => {
             <img src="/portfolioImage.jpg" alt="foto" className="w-full h-[350px]" />
 
             <PortItems />
+
+            <FooterCl />
         </motion.div>
     );
 

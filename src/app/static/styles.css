@@ -5,6 +5,9 @@
     margin: 0 auto;
 }
 
+html{
+    scroll-behavior: smooth;
+}
 
 .flex{
     display: flex;

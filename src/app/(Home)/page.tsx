@@ -76,7 +76,7 @@ export default function Home() {
             <div className="flex">
               <div className="txt-sobre items-center">
                 <h1 className=" text-4xl font-bold leading-10 mb-14">Sobre nós</h1>
-                <p className="text-base font-light leading-6 text-black">No início de 2023, a RCL Analytics surgiu com o compromisso de potencializar de forma proveitosa o faturamento de seus clientes, nós nos evidenciamos como uma entidade singular, unindo os atributos de uma agência e uma consultoria de negócios, impulsionada por uma tecnologia de ponta e inteligência artificial. Nossa perspectiva de valor harmoniza em uma abordagem coesa, tendo cinco áreas de conhecimentos que regularmente se encontram dispersas no mercado::</p>
+                <p className="text-base font-light leading-6 text-black">A RCL Analytics é uma empresa especializada em análise de dados e automação de processos, empenhada em transformar seus dados em decisões estratégicas e rentável. Com seis anos de conhecimento no mercado, estamos prontos para atender tanto as organizações de menor porte quanto as de grande porte, oferecendo sempre soluções personalizadas que se adequam às demandas individuais de cada cliente.</p>
               </div>
             </div>
           </div>
@@ -92,18 +92,18 @@ export default function Home() {
 
               <div className="met-box">
                 <h3 className="subtitle">Metodologia de trabalho:</h3>
-                <p className="desc">Nosso time são sempre customizados e totalmente dedicados ao cliente, atuando em reuniões online, reuniões presenciais e contato via texto todos os dias da semana.</p>
+                <p className="desc">Em nossa empresa temos a ideologia de que a chave para alcançar resultados excepcionais está na simplicidade e na eficiência. A nossa abordagem de trabalho é pensada para ser transparente, objetiva e focada em resultados, assegurando que todos os projetos sejam realizados com precisão e rapidez.</p>
               </div>
 
               <div className="met-box">
-                <h3 className="subtitle"><span className="gambiarra">Comprometimento</span> e resultados:</h3>
-                <p className="desc">Todos nossos contratos têm um componente relevante de remuneração variável: Ganhamos apenas quando o cliente ganha. Medimos a performance a partir das ações tomadas.</p>
+                <h3 className="subtitle">Nossa Missão:</h3>
+                <p className="desc">Temos como objetivo capacitar organizações a realizar escolhas mais precisas e ágeis, fundamentadas em informações concretas em vez de suposições. Acreditamos que a análise de dados seja essencial para alcançar o êxito nos negócios, propiciando uma compreensão abrangente do mercado e dos clientes.</p>
               </div>
 
               {/* TODO direcionar botão */}
               <div className="btn-contato">
-                <a href="#">
-                  <button>Entre em contato</button>
+                <a target="blank" href="https://linktr.ee/rclanalytics?utm_source=linktree_profile_share&ltsid=fc2d3a68-cb62-4376-8473-4fbfacd3b74e">
+                  <button>Faça o seu orçamento</button>
                 </a>
               </div>
 
@@ -130,7 +130,7 @@ export default function Home() {
 
                   }}>01</span>
 
-                <p className=" !text-black lg:text-[1.125rem]"><strong>Serviços Centralizados e Diretos:</strong> Eliminamos a necessidade de envolver terceiros, garantindo uma experiência mais eficiente e direta para nossos clientes.</p>
+                <p className=" !text-black lg:text-[1.125rem]"><strong>Adaptação às Necessidades do Cliente:</strong> Cada solução é cuidadosamente adaptada às necessidades específicas de cada cliente, garantindo que nossas propostas sejam eficazes e alinhadas com os objetivos do negócio.</p>
 
               </div>
               <div className="d2 Container-list relative z-5 pt-4 pb-12 space-y-4 lg:space-y-0 lg:mt-0 lg:pt-16 lg:pb-24 dark:text-white">
@@ -141,7 +141,7 @@ export default function Home() {
 
                   }}>02</span>
 
-                <p className=" !text-black lg:text-[1.125rem]"><strong>Ferramentas Integradas para Facilitar a Entrega:</strong>  Utilizamos ferramentas integradas de última geração para tornar a entrega dos serviços mais eficiente e eficaz.</p>
+                <p className=" !text-black lg:text-[1.125rem]"><strong>Flexibilidade e Agilidade:</strong>  Utilizamos metodologias ágeis para adaptar rapidamente às mudanças e garantir a implementação eficiente das soluções.</p>
 
               </div>
               <div className="d3 Container-list relative z-5  pb-12 space-y-4 lg:space-y-0 lg:mt-0 lg:pt-16 lg:pb-24 dark:text-white">
@@ -152,7 +152,7 @@ export default function Home() {
 
                   }}>03</span>
 
-                <p className=" !text-black lg:text-[1.125rem]"><strong>Planos Personalizáveis para Atender às Necessidades de Negócios Diversos:</strong> Oferecemos planos personalizáveis que se adaptam aos diferentes tipos de negócios e tamanhos de empresa, garantindo que cada cliente receba exatamente o que precisa.</p>
+                <p className=" !text-black lg:text-[1.125rem]"><strong> Foco em Resultados:</strong> Decisões Baseadas em Dados: Nossas análises e propostas são fundamentadas em dados concretos, eliminando achismos e garantindo decisões mais assertivas.</p>
 
               </div>
               <div className="d4 Container-list relative z-5 pt-4 pb-12 space-y-4 lg:space-y-0 lg:mt-0 lg:pt-16 lg:pb-24">
@@ -163,8 +163,29 @@ export default function Home() {
 
                   }}>04</span>
 
-                <p className=" !text-black lg:text-[1.125rem]"><strong>Suporte e Esclarecimento de Dúvidas 24/7:</strong> Nossa equipe de suporte está disponível 24 horas por dia, 7 dias por semana, para fornecer assistência e esclarecer qualquer dúvida que nossos clientes possam ter, garantindo assim uma comunicação contínua e eficaz.</p>
+                <p className=" !text-black lg:text-[1.125rem]"><strong>Aumento de Performance:</strong> Nosso objetivo é aumentar a performance dos nossos clientes, seja através da automação de processos, análise de dados ou campanhas de marketing digital.</p>
+              </div>
 
+              <div className="d4 Container-list relative z-5 pt-4 pb-12 space-y-4 lg:space-y-0 lg:mt-0 lg:pt-16 lg:pb-24">
+                <span className="Number-list  !font-bold !text-[4.625rem] !leading-[5rem] dark:text-white"
+                  style={{
+                    marginRight: '45px',
+                    marginBottom: '56px'
+
+                  }}>05</span>
+
+                <p className=" !text-black lg:text-[1.125rem]"><strong>Transparência e Confiança:</strong> Processos Transparentes: Mantemos nossos clientes informados sobre cada etapa do processo, garantindo total transparência e confiança.</p>
+              </div>
+
+              <div className="d4 Container-list relative z-5 pt-4 pb-12 space-y-4 lg:space-y-0 lg:mt-0 lg:pt-16 lg:pb-24">
+                <span className="Number-list  !font-bold !text-[4.625rem] !leading-[5rem] dark:text-white"
+                  style={{
+                    marginRight: '45px',
+                    marginBottom: '56px'
+
+                  }}>06</span>
+
+                <p className=" !text-black lg:text-[1.125rem]"><strong>Resultados Comprovados:</strong>  Apresentamos resultados concretos e mensuráveis, demonstrando claramente o impacto das nossas soluções no negócio dos nossos clientes</p>
               </div>
 
             </div>
@@ -177,7 +198,7 @@ export default function Home() {
           <div className="interface">
 
             <div className="forms-container flex flex-col">
-              <h1 className="txt-form text-white">Faça o seu orçamento!</h1>
+              <h1 className="txt-form text-white">Entre em contato</h1>
               <Forms />
             </div>
 
